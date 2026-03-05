@@ -19,3 +19,18 @@ En tant que professionnel de l'informatique, il est de notre responsabilité d'a
 
 Pendant la phase de développement, il faut mettre en place les bonnes pratiques d'éco-conception : https://rweb.greenit.fr/fr/fiches (merci l'association Green-IT).
 Mais avant cette phase se pose la question du bon choix technologique (et souvent celle du bon framework), ainsi nous allons comparer les différents framework web en créant une todo et en comparant les résultats en utilisant marmelab/greenframe-cli
+
+## Installer Greenframe 
+
+curl https://assets.greenframe.io/install.sh | bash
+
+## Lancer et évaluer l'application en javascript
+
+Sur le premier terminal : 
+
+cd VanillaJS
+node index.js
+
+Sur le second terminal : 
+
+reenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js
