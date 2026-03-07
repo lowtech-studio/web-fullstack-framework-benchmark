@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ToDo App</title>
+    </head>
+    <body>
+        <h1>ToDo App Benchmark</h1>
+        <input id="create-todo-field" type="text" name="todo" /><input id="create-todo-button" type="submit" value="Submit" />
+        <ul id="todos"></ul>
+        <script>
+            const hostname = 'http://localhost:3001';
+
+            window.addEventListener("load", (event) => {
+                getTodos();
+            });
+
+            document.getElementById('create-todo-button').addEventListener('click', (event) => {
+                createTodo();
+            });
+            
+            function getTodos() {
+                fetch(`${hostname}/`).then(res => res.json()).then(data => {
+                    const list = document.getElementById('todos');
+                    list.innerHTML = '';
+                    data.forEach(todo => {
+                        const item = document.createElement('li');
+                        item.textContent = todo.todo + " ";
+                        var a = document.createElement('a');
+                        var linkText = document.createTextNode("Delete");
+                        a.appendChild(linkText);
+                        a.href = "#";
+                        a.id = `delete-todo-link-${todo.todo}`;
+                        a.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            fetch(`${hostname}/delete`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(todo),
+                            }).then(res => res.json()).then(data => {
+                                getTodos();
+                            });
+                        }); 
+                        item.appendChild(a);
+                        list.appendChild(item);
+                    });
+                });
+            }
+
+            function createTodo() {
+                const field = document.getElementById('create-todo-field');
+                const todo = field.value;
+                fetch(`${hostname}/create`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({'todo':todo}),
+                }).then(res => res.json()).then(data => {
+                    getTodos();
+                    field.value = '';
+                });
+            }
+        </script>
+    </body>
+</html>

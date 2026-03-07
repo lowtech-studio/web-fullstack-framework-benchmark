@@ -20,17 +20,59 @@ En tant que professionnel de l'informatique, il est de notre responsabilité d'a
 Pendant la phase de développement, il faut mettre en place les bonnes pratiques d'éco-conception : https://rweb.greenit.fr/fr/fiches (merci l'association Green-IT).
 Mais avant cette phase se pose la question du bon choix technologique (et souvent celle du bon framework), ainsi nous allons comparer les différents framework web en créant une todo et en comparant les résultats en utilisant marmelab/greenframe-cli
 
-## Installer Greenframe 
+## Résultat du benchmark 
 
-curl https://assets.greenframe.io/install.sh | bash
+Pour executer un scénario de CRUD standard : 
+* lister 10000 todos
+* créer une todo
+* supprimer une todo
 
-## Lancer et évaluer l'application en javascript
+| Technologie utilisée | Estimation Empreinte carbone | Consommation électrique |
+| :---------------: |:---------------:| :-----:|
+| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh |
+| VanillaJS Server Side Rendering | 18.9 mg eq. co2 ± 10% | 42 mWh |
+
+## Lancer le benchmark
+
+### Installer Greenframe 
+
+```curl https://assets.greenframe.io/install.sh | bash```
+
+Je considère que vous vous trouvez dans le dossier : 'todo-app-framework-benchmark'
+
+### Créer les jeux de données
+
+```node initdb.js```
+
+### Lancer et évaluer l'application en javascript Client Side Rendering
 
 Sur le premier terminal : 
 
-cd VanillaJS
+```
+cd VanillaJS/CSR
 node index.js
+```
 
 Sur le second terminal : 
 
-reenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js
+```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+
+### Lancer et évaluer l'application en javascript Server Side Rendering
+
+Sur le premier terminal : 
+
+```
+cd VanillaJS/SSR
+node index.js
+```
+
+Sur le deuxième terminal : 
+
+```
+cd VanillaJS/SSR
+node server.js
+```
+
+Sur le troisième terminal : 
+
+```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```

@@ -2,7 +2,7 @@ import { createServer } from 'node:http';
 import { DatabaseSync } from 'node:sqlite';
 
 const db = new DatabaseSync('todos.db');
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 const port = 3000;
 
 const server = createServer((req, res) => {
@@ -28,7 +28,7 @@ const server = createServer((req, res) => {
       });
       res.end();
   } else {
-    res.write(`<html lang="en"><head><title>ToDo App</title></head><body>
+    res.write(`<!DOCTYPE html><html lang="en"><head><title>ToDo App</title></head><body>
                 <h1>ToDo App Benchmark</h1>
                 <form action="/create" method="post" >
                   <input id="create-todo-field" type="text" name="todo" /><input id="create-todo-button" type="submit" value="Submit" />
