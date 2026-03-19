@@ -104,4 +104,16 @@ Sur le troisième terminal :
 
 ```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
 
+### Lancer et évaluer l'application en NextJS
 
+Sur le premier terminal : 
+
+```
+cd nextjs
+npm build
+npm start
+```
+
+Sur le second terminal : 
+
+```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
