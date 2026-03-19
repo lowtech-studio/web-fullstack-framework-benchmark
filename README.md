@@ -22,15 +22,42 @@ Mais avant cette phase se pose la question du bon choix technologique (et souven
 
 ## Résultat du benchmark 
 
-Pour executer un scénario de CRUD standard : 
-* lister 10000 todos
+On execute un scénario de CRUD standard : 
+* lister sur une page 10000 todos
 * créer une todo
 * supprimer une todo
 
-| Technologie utilisée | Estimation Empreinte carbone | Consommation électrique |
-| :---------------: |:---------------:| :-----:|
-| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh |
-| VanillaJS Server Side Rendering | 18.9 mg eq. co2 ± 10% | 42 mWh |
+et voir la consommation de ce scénario pour chaque technologie
+
+| Technologie utilisée | Estimation Empreinte carbone | Consommation électrique | Commentaires |
+| :-------------------:|:----------------------------:|:-----------------------:|:------------:|
+| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh | * chargement en une fois du html 2,8ko * récupération de la liste des todos pour charger une partie de la page 209ko * creation envoi d'une requete de create (puis de delete) 343 o * récupération de la liste des todos pour charger une partie de la page 209ko (idem delete) - 4 fichiers 168ko |
+| VanillaJS Server Side Rendering | 18.9 mg eq. co2 ± 10% | 42 mWh | * chargement de la page générée avec toute les todos 937 ko * création et récupération de la page complète 937ko * suppression et récupération de la page complète 937ko - 1 fichier 1,7ko |
+| NextJS | | | Javascript https://github.com/vercel/next.js 138k stars - 10429 fichiers 387,5 Mo |
+| Django | | | Python https://github.com/django/django 87k stars |
+| Laravel | | | Php https://github.com/laravel/laravel 83k stars |
+| Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
+| Astro | | | Javascript https://github.com/withastro/astro 57k stars |
+| Fastify | | | Javascript https://github.com/fastify/fastify 35k stars |
+| Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
+| Dioxus | | | Javascript https://github.com/DioxusLabs/dioxus 35k stars |
+| Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
+| Hono | | | Javascript https://github.com/honojs/hono 29k stars |
+| Quasar | | | Javascript https://github.com/quasarframework/quasar 27k stars |
+| Qwik | | | Javascript https://github.com/QwikDev/qwik 21k stars |
+| SvelteKit | | | Javascript https://github.com/sveltejs/kit 20k stars |
+| Wasp | | | Javascript https://github.com/wasp-lang/wasp 18k stars |
+| Adonis | | | Javascript https://github.com/adonisjs/core 18k stars |
+| Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
+| TanStack | | | Javascript https://github.com/TanStack/router 13k stars |
+| Vinext | | | Javascript https://github.com/cloudflare/vinext 6k stars |
+| Solid Start | | | Javascript https://github.com/solidjs/solid-start 6k stars |
+| ModernJS | | | Javascript https://github.com/web-infra-dev/modern.js 5k stars |
+| Bud | | | Go https://github.com/livebud/bud 5k stars |
+| Derby | | | Javascript https://github.com/derbyjs/derby 4k stars |
+| MoonZoon | | | Rust https://github.com/MoonZoon/MoonZoon 1k stars |
+| Tuono | | | Rust https://github.com/tuono-labs/tuono 1k stars |
+
 
 ## Lancer le benchmark
 
@@ -76,3 +103,5 @@ node server.js
 Sur le troisième terminal : 
 
 ```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+
+
