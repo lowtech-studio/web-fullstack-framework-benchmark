@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ToDo App</title>
+</head>
+<body>
+    <h1>ToDo App Benchmark</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <input id="create-todo-field" type="text" name="todo" />
+        <input id="create-todo-button" type="submit" value="Submit" />
+    </form>
+    <ul id="todos">
+        {% for todo in todos %}
+        <li>{{ todo.todo }} <a id="delete-todo-link-{{ todo.todo }}" href="/delete?todo={{ todo.todo|urlencode }}">Delete</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
