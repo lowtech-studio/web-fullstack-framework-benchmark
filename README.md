@@ -34,7 +34,7 @@ et voir la consommation de ce scénario pour chaque technologie
 | VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh | * chargement en une fois du html 2,8ko * récupération de la liste des todos pour charger une partie de la page 209ko * creation envoi d'une requete de create (puis de delete) 343 o * récupération de la liste des todos pour charger une partie de la page 209ko (idem delete) - 4 fichiers 168ko |
 | VanillaJS Server Side Rendering | 18.9 mg eq. co2 ± 10% | 42 mWh | * chargement de la page générée avec toute les todos 937 ko * création et récupération de la page complète 937ko * suppression et récupération de la page complète 937ko - 1 fichier 1,7ko |
 | NextJS | 97.819 mg eq. co2 ± 1.3% | 221 mWh | Javascript https://github.com/vercel/next.js 138k stars - 10429 fichiers 387,5 Mo |
-| Django | | | Python https://github.com/django/django 87k stars |
+| Django | 19.173 mg eq. co2 ± 3.6%| 43 mWh | Python https://github.com/django/django 87k stars |
 | Laravel | | | Php https://github.com/laravel/laravel 83k stars |
 | Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
 | Astro | | | Javascript https://github.com/withastro/astro 57k stars |
@@ -112,6 +112,18 @@ Sur le premier terminal :
 cd nextjs
 npm build
 npm start
+```
+
+Sur le second terminal : 
+
+```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+
+### Lancer et évaluer l'application en Django
+
+Sur le premier terminal : 
+
+```
+python3 manage.py runserver 0.0.0.0:3000
 ```
 
 Sur le second terminal : 
