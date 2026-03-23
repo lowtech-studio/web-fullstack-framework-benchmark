@@ -36,7 +36,7 @@ et voir la consommation de ce scénario pour chaque technologie
 | NextJS | 97.819 mg eq. co2 ± 1.3% | 221 mWh | Javascript https://github.com/vercel/next.js 138k stars - 10429 fichiers 387,5 Mo |
 | Django | 19.173 mg eq. co2 ± 3.6%| 43 mWh | Python https://github.com/django/django 87k stars |
 | Nuxt | 11.248 mg eq. co2 ± 9.3% | 25mWh | Javascript https://github.com/nuxt/nuxt 59k stars |
-| Astro | | | Javascript https://github.com/withastro/astro 57k stars |
+| Astro | 15.498 mg eq. co2 ± 2.4% | 35mWh | Javascript https://github.com/withastro/astro 57k stars |
 | Fastify | | | Javascript https://github.com/fastify/fastify 35k stars |
 | Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
 | Dioxus | | | Javascript https://github.com/DioxusLabs/dioxus 35k stars |
