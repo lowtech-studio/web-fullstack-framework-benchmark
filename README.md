@@ -31,19 +31,19 @@ et voir la consommation de ce scénario pour chaque technologie
 
 | Technologie utilisée | Estimation Empreinte carbone | Consommation électrique | Commentaires |
 | :-------------------:|:----------------------------:|:-----------------------:|:------------:|
-| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh | * chargement en une fois du html 2,8ko * récupération de la liste des todos pour charger une partie de la page 209ko * creation envoi d'une requete de create (puis de delete) 343 o * récupération de la liste des todos pour charger une partie de la page 209ko (idem delete) - 4 fichiers 168ko |
-| VanillaJS Server Side Rendering | 18.9 mg eq. co2 ± 10% | 42 mWh | * chargement de la page générée avec toute les todos 937 ko * création et récupération de la page complète 937ko * suppression et récupération de la page complète 937ko - 1 fichier 1,7ko |
-| NextJS | 97.819 mg eq. co2 ± 1.3% | 221 mWh | Javascript https://github.com/vercel/next.js 138k stars - 10429 fichiers 387,5 Mo |
-| Django | 19.173 mg eq. co2 ± 3.6%| 43 mWh | Python https://github.com/django/django 87k stars |
+| NextJS | 106mg eq. co2 | 242 mWh | Javascript https://github.com/vercel/next.js 138k stars |
+| Qwik | 50 mg eq. co2 | 114 mWh | Javascript https://github.com/QwikDev/qwik 21k stars |
+| Dioxus | 16 mg eq. co2 | 36 mWh | Javascript https://github.com/DioxusLabs/dioxus 35k stars |
+| Django | 19.173 mg eq. co2 | 43 mWh | Python https://github.com/django/django 87k stars |
+| VanillaJS Server Side Rendering | 18.9 mg eq. co2 | 42 mWh | * chargement de la page générée avec toute les todos 937 ko * création et récupération de la page complète 937ko * suppression et récupération de la page complète 937ko - 1 fichier 1,7ko |
+| Fastify | 16 mg eq. co2 | 36 mWh | Javascript https://github.com/fastify/fastify 35k stars |
+| Astro | 16 mg eq. co2 | 36mWh | Javascript https://github.com/withastro/astro 57k stars |
 | Nuxt | 11.248 mg eq. co2 ± 9.3% | 25mWh | Javascript https://github.com/nuxt/nuxt 59k stars |
-| Astro | 15.498 mg eq. co2 ± 2.4% | 35mWh | Javascript https://github.com/withastro/astro 57k stars |
-| Fastify | | | Javascript https://github.com/fastify/fastify 35k stars |
-| Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
-| Dioxus | | | Javascript https://github.com/DioxusLabs/dioxus 35k stars |
+| Meteor | 9.683 mg eq. co2 ± 11.3% | 21 mWh | Javascript https://github.com/meteor/meteor 44k stars |
+| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh | * chargement en une fois du html 2,8ko * récupération de la liste des todos pour charger une partie de la page 209ko * creation envoi d'une requete de create (puis de delete) 343 o * récupération de la liste des todos pour charger une partie de la page 209ko (idem delete) - 4 fichiers 168ko |
 | Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
 | Hono | | | Javascript https://github.com/honojs/hono 29k stars |
 | Quasar | | | Javascript https://github.com/quasarframework/quasar 27k stars |
-| Qwik | | | Javascript https://github.com/QwikDev/qwik 21k stars |
 | SvelteKit | | | Javascript https://github.com/sveltejs/kit 20k stars |
 | Wasp | | | Javascript https://github.com/wasp-lang/wasp 18k stars |
 | Adonis | | | Javascript https://github.com/adonisjs/core 18k stars |
