@@ -31,31 +31,30 @@ et voir la consommation de ce scénario pour chaque technologie
 
 | Technologie utilisée | Estimation Empreinte carbone | Consommation électrique | Commentaires |
 | :-------------------:|:----------------------------:|:-----------------------:|:------------:|
-| NextJS | 106mg eq. co2 | 242 mWh | Javascript https://github.com/vercel/next.js 138k stars |
-| Qwik | 50 mg eq. co2 | 114 mWh | Javascript https://github.com/QwikDev/qwik 21k stars |
-| Dioxus | 16 mg eq. co2 | 36 mWh | Javascript https://github.com/DioxusLabs/dioxus 35k stars |
-| Django | 19.173 mg eq. co2 | 43 mWh | Python https://github.com/django/django 87k stars |
-| VanillaJS Server Side Rendering | 18.9 mg eq. co2 | 42 mWh | * chargement de la page générée avec toute les todos 937 ko * création et récupération de la page complète 937ko * suppression et récupération de la page complète 937ko - 1 fichier 1,7ko |
-| Fastify | 16 mg eq. co2 | 36 mWh | Javascript https://github.com/fastify/fastify 35k stars |
-| Astro | 16 mg eq. co2 | 36mWh | Javascript https://github.com/withastro/astro 57k stars |
-| Nuxt | 11.248 mg eq. co2 ± 9.3% | 25mWh | Javascript https://github.com/nuxt/nuxt 59k stars |
-| Meteor | 9.683 mg eq. co2 ± 11.3% | 21 mWh | Javascript https://github.com/meteor/meteor 44k stars |
-| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh | * chargement en une fois du html 2,8ko * récupération de la liste des todos pour charger une partie de la page 209ko * creation envoi d'une requete de create (puis de delete) 343 o * récupération de la liste des todos pour charger une partie de la page 209ko (idem delete) - 4 fichiers 168ko |
-| Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
-| Hono | | | Javascript https://github.com/honojs/hono 29k stars |
-| Quasar | | | Javascript https://github.com/quasarframework/quasar 27k stars |
-| SvelteKit | | | Javascript https://github.com/sveltejs/kit 20k stars |
-| Wasp | | | Javascript https://github.com/wasp-lang/wasp 18k stars |
 | Adonis | | | Javascript https://github.com/adonisjs/core 18k stars |
-| Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
-| TanStack | | | Javascript https://github.com/TanStack/router 13k stars |
-| Vinext | | | Javascript https://github.com/cloudflare/vinext 6k stars |
-| Solid Start | | | Javascript https://github.com/solidjs/solid-start 6k stars |
-| ModernJS | | | Javascript https://github.com/web-infra-dev/modern.js 5k stars |
-| Bud | | | Go https://github.com/livebud/bud 5k stars |
+| Blitz.js       | | | Javascript https://github.com/blitz-js/blitz    14k stars |
 | Derby | | | Javascript https://github.com/derbyjs/derby 4k stars |
-| MoonZoon | | | Rust https://github.com/MoonZoon/MoonZoon 1k stars |
-| Tuono | | | Rust https://github.com/tuono-labs/tuono 1k stars |
+| Dioxus | | | Rust https://github.com/DioxusLabs/dioxus 35k stars |
+| Django | | | Python https://github.com/django/django 87k stars |
+| Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
+| Grails         | | | Groovy https://github.com/grails/grails-core     2k stars |
+| Laravel        | | | PHP    https://github.com/laravel/laravel    80k stars |
+| Leptos         | | | Rust   https://github.com/leptos-rs/leptos      18k stars |
+| Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
+| NextJS | | | Javascript https://github.com/vercel/next.js 138k stars |
+| Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
+| Phoenix        | | | Elixir https://github.com/phoenixframework/phoenix 22k stars |
+| Qwik | | | Javascript https://github.com/QwikDev/qwik 21k stars |
+| RedwoodJS      | | | Javascript https://github.com/redwoodjs/redwood 16k stars |
+| Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
+| Ruby on Rails  | | | Ruby   https://github.com/rails/rails         55k stars |
+| Solid Start | | | Javascript https://github.com/solidjs/solid-start 6k stars |
+| SvelteKit | | | Javascript https://github.com/sveltejs/kit 20k stars |
+| T3 Stack       | | | Javascript https://github.com/t3-oss/create-t3-app 27k stars |
+| TanStack | | | Javascript https://github.com/TanStack/router 13k stars |
+| VanillaJS Server Side Rendering | 18.9 mg eq. co2 | 42 mWh |  |
+| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh |  |
+| Wasp | | | Javascript https://github.com/wasp-lang/wasp 18k stars |
 
 
 ## Lancer le benchmark
@@ -100,31 +99,5 @@ node server.js
 ```
 
 Sur le troisième terminal : 
-
-```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
-
-### Lancer et évaluer l'application en NextJS
-
-Sur le premier terminal : 
-
-```
-cd nextjs
-npm build
-npm start
-```
-
-Sur le second terminal : 
-
-```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
-
-### Lancer et évaluer l'application en Django
-
-Sur le premier terminal : 
-
-```
-python3 manage.py runserver 0.0.0.0:3000
-```
-
-Sur le second terminal : 
 
 ```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```

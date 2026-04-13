@@ -1,0 +1,12 @@
+@layout()
+  <h1>ToDo App Benchmark</h1>
+  <form action="/create" method="post">
+    <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+    <input id="create-todo-field" type="text" name="todo" /><input id="create-todo-button" type="submit" value="Submit" />
+  </form>
+  <ul id="todos">
+    @each(todo in todos)
+      <li>{{ todo.todo }} <a id="delete-todo-link-{{ todo.todo }}" href="/delete?todo={{ todo.todo }}">Delete</a></li>
+    @end
+  </ul>
+@end
