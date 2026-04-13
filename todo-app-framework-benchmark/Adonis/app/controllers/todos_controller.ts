@@ -1,9 +1,14 @@
 import Todo from '#models/todo'
 import type { HttpContext } from '@adonisjs/core/http'
+import db from '@adonisjs/lucid/services/db'
 
 export default class TodosController {
   async index({ view }: HttpContext) {
-    const todos = await Todo.all()
+    
+    const todos = await db
+        .from('todos')
+        .orderBy('id', 'asc')
+
     return view.render('todos/index', { todos })
   }
 
