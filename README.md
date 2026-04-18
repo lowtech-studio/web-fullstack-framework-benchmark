@@ -35,13 +35,10 @@ et voir la consommation de ce scénario pour chaque technologie
 | Dioxus | | | Rust https://github.com/DioxusLabs/dioxus 35k stars |
 | Django | | | Python https://github.com/django/django 87k stars |
 | Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
-| Grails | | | Groovy https://github.com/grails/grails-core     2k stars |
 | Laravel | | | PHP    https://github.com/laravel/laravel    80k stars |
-| Leptos | | | Rust   https://github.com/leptos-rs/leptos      18k stars |
 | Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
 | NextJS | | | Javascript https://github.com/vercel/next.js 138k stars |
 | Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
-| Phoenix        | | | Elixir https://github.com/phoenixframework/phoenix 22k stars |
 | Qwik | | | Javascript https://github.com/QwikDev/qwik 21k stars |
 | RedwoodJS      | | | Javascript https://github.com/redwoodjs/redwood 16k stars |
 | Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
@@ -99,3 +96,10 @@ node server.js
 Sur le troisième terminal : 
 
 ```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+
+## Lancer les applications
+
+* Adonis : npm run start
+* Dioxus : dx serve
+* Django : python3 manage.py runserver 0.0.0.0:3000
+* Fresh : deno serve -A _fresh/server.js 2>&1
