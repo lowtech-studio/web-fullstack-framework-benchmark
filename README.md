@@ -32,14 +32,12 @@ et voir la consommation de ce scénario pour chaque technologie
 | Technologie utilisée | Estimation Empreinte carbone | Consommation électrique | Commentaires |
 | :-------------------:|:----------------------------:|:-----------------------:|:------------:|
 | Adonis | | | Javascript https://github.com/adonisjs/core 18k stars |
-| Blitz.js       | | | Javascript https://github.com/blitz-js/blitz    14k stars |
-| Derby | | | Javascript https://github.com/derbyjs/derby 4k stars |
 | Dioxus | | | Rust https://github.com/DioxusLabs/dioxus 35k stars |
 | Django | | | Python https://github.com/django/django 87k stars |
 | Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
-| Grails         | | | Groovy https://github.com/grails/grails-core     2k stars |
-| Laravel        | | | PHP    https://github.com/laravel/laravel    80k stars |
-| Leptos         | | | Rust   https://github.com/leptos-rs/leptos      18k stars |
+| Grails | | | Groovy https://github.com/grails/grails-core     2k stars |
+| Laravel | | | PHP    https://github.com/laravel/laravel    80k stars |
+| Leptos | | | Rust   https://github.com/leptos-rs/leptos      18k stars |
 | Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
 | NextJS | | | Javascript https://github.com/vercel/next.js 138k stars |
 | Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
@@ -80,7 +78,7 @@ node index.js
 
 Sur le second terminal : 
 
-```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+```greenframe analyze http://172.17.0.1:3000 ./greenframe/todo-basic.js```
 
 ### Lancer et évaluer l'application en javascript Server Side Rendering
 
