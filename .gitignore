@@ -1,23 +1,30 @@
-# SQLite databases
-VanillaJS/SSR/todos.db
-VanillaJS/CSR/todos.db
-Django/db.sqlite3
-Adonis/tmp/
-
 # Python / Django
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyd
 *.pyc
+*.egg
 *.egg-info/
+dist/
+build/
+.eggs/
 .venv/
 venv/
+env/
+.env
+*.sqlite3
 
 # Node.js
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm/
 
 # Rust / Cargo
-Dioxus-app/target/
+target/
 
 # OS
 .DS_Store
@@ -27,6 +34,7 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+*.swo
 *~
 
 # Greenframe
