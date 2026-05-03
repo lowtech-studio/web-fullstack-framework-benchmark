@@ -22,35 +22,67 @@ Mais avant cette phase se pose la question du bon choix technologique (et souven
 
 ## Résultat du benchmark 
 
-On execute un scénario de CRUD standard : 
+On execute un scénario de CRUD standard todo-basic : 
 * lister sur une page 10000 todos
 * créer une todo
 * supprimer une todo
 
-et voir la consommation de ce scénario pour chaque technologie
+| Technologie utilisée | Estimation Empreinte carbone todo-basic | Consommation électrique todo-basic | Commentaires                                          |
+|:--------------------:|:---------------------------------------:|:----------------------------------:|:-----------------------------------------------------:|
+| Fresh                | 4-8 mg eq co2                           | 10-17 mWh                          | Javascript https://github.com/denoland/fresh 13k stars |
+| Dioxus               | 4-18 mg eq co2                          | 9-41 mWh                           | Rust https://github.com/DioxusLabs/dioxus 35k stars   |
+| Meteor               | 9-10 mg eq co2                          | 21-22 mWh                          | Javascript https://github.com/meteor/meteor 44k stars |
+| Laravel Vue          | 10 mg eq co2                            | 22 mWh                             | PHP    https://github.com/laravel/laravel    80k stars |
+| Laravel React        | 10,4 mg eq co2                          | 23 mWh                             | PHP    https://github.com/laravel/laravel    80k stars |
+| Laravel Svelte       | 10,5 mg eq co2                          | 23 mWh                             | PHP    https://github.com/laravel/laravel    80k stars |
+| Nuxt                 | 11-15 mg eq co2                         | 24 mWh                             | Javascript https://github.com/nuxt/nuxt 59k stars |
+| NextJS               | 13-14 mg eq co2                         | 30 mWh                             | Javascript https://github.com/vercel/next.js 138k stars |
+| SvelteKit            | 12,8 mg eq co2                          | 29 mWh                             | Javascript https://github.com/sveltejs/kit 20k stars |
+| Adonis               | 17-20 mg eq co2                         | 39-46 mWh                          | Javascript https://github.com/adonisjs/core 18k stars |
+| TanStack             | 18 mg eq co2                            | 42 mWh                             | Javascript https://github.com/TanStack/router 13k stars |
+| Django               | 22 mg eq co2                            | 50 mWh                             | Python https://github.com/django/django 87k stars |
+| Solid Start          | 25 mg eq co2                            | 56 mWh                             | Javascript https://github.com/solidjs/solid-start 6k stars |
+| Wasp                 | 30 mg eq co2                            | 68 mWh                             | Javascript https://github.com/wasp-lang/wasp 18k stars |
+| Qwik                 | 105 mg eq co2                           | 239 mWh                            | Javascript https://github.com/QwikDev/qwik 21k stars |
+| Remix                | 220 mg eq co2                           | 498 mWh                            | Javascript https://github.com/remix-run/remix 32k stars |
+| VanillaJS Server Side Rendering | 18.9 mg eq. co2              | 42 mWh                             |
+| VanillaJS Client Side Rendering | 9.5 mg eq. co2               | 21 mWh                             |
 
-| Technologie utilisée | Estimation Empreinte carbone | Consommation électrique | Commentaires |
-| :-------------------:|:----------------------------:|:-----------------------:|:------------:|
-| Adonis | | | Javascript https://github.com/adonisjs/core 18k stars |
-| Dioxus | | | Rust https://github.com/DioxusLabs/dioxus 35k stars |
-| Django | | | Python https://github.com/django/django 87k stars |
-| Fresh | | | Javascript https://github.com/denoland/fresh 13k stars |
-| Laravel | | | PHP    https://github.com/laravel/laravel    80k stars |
-| Meteor | | | Javascript https://github.com/meteor/meteor 44k stars |
-| NextJS | | | Javascript https://github.com/vercel/next.js 138k stars |
-| Nuxt | | | Javascript https://github.com/nuxt/nuxt 59k stars |
-| Qwik | | | Javascript https://github.com/QwikDev/qwik 21k stars |
-| RedwoodJS      | | | Javascript https://github.com/redwoodjs/redwood 16k stars |
-| Remix | | | Javascript https://github.com/remix-run/remix 32k stars |
-| Ruby on Rails  | | | Ruby   https://github.com/rails/rails         55k stars |
-| Solid Start | | | Javascript https://github.com/solidjs/solid-start 6k stars |
-| SvelteKit | | | Javascript https://github.com/sveltejs/kit 20k stars |
-| T3 Stack       | | | Javascript https://github.com/t3-oss/create-t3-app 27k stars |
-| TanStack | | | Javascript https://github.com/TanStack/router 13k stars |
-| VanillaJS Server Side Rendering | 18.9 mg eq. co2 | 42 mWh |  |
-| VanillaJS Client Side Rendering | 9.5 mg eq. co2 ± 7% |  21 mWh |  |
-| Wasp | | | Javascript https://github.com/wasp-lang/wasp 18k stars |
 
+On execute un scénario de CRUD standard todo-advanced :
+* lister sur une page 10000 todos
+* créer et supprimer 10 todos
+
+| Technologie utilisée | Estimation Empreinte carbone todo-advanced | Consommation électrique todo-advanced | Commentaires                                          |
+|:--------------------:|:---------------------------------------:|:----------------------------------:|:-----------------------------------------------------:|
+| Fresh                | 29 mg eq co2 | 67 mWh | Javascript https://github.com/denoland/fresh 13k stars |
+| Laravel Svelte       | 54 mg eq co2 | 122 mWh | PHP    https://github.com/laravel/laravel    80k stars |
+| Nuxt                 | 55 mg eq co2    | 126 mWh | Javascript https://github.com/nuxt/nuxt 59k stars |
+| Dioxus               | 55-58 mg eq co2 | 132 mWh | Rust https://github.com/DioxusLabs/dioxus 35k stars   |
+| NextJS               | 62 mg eq co2 | 141 mWh | Javascript https://github.com/vercel/next.js 138k stars |
+| Laravel Vue          | 70 mg eq co2 | 158 mWh | PHP    https://github.com/laravel/laravel    80k stars |
+| Laravel React        | 71 mg eq co2 | 161 mWh | PHP    https://github.com/laravel/laravel    80k stars |
+| Meteor               | 87 mg eq co2 | 196 mWh | Javascript https://github.com/meteor/meteor 44k stars |
+| TanStack             | 113-117 mg eq co2 | 257 mWh | Javascript https://github.com/TanStack/router 13k stars |
+| Wasp                 | 143 mg eq co2 | 325 mWh | Javascript https://github.com/wasp-lang/wasp 18k stars |
+| Adonis               | 179-181 mg eq co2 | 411 mWh | Javascript https://github.com/adonisjs/core 18k stars |
+| Django               | 219 mg eq co2 | 497 mWh | Python https://github.com/django/django 87k stars |
+| Qwik                 | 263 mg eq co2 | 596 mWh | Javascript https://github.com/QwikDev/qwik 21k stars |
+| Remix                | Timeout | Timeout | Javascript https://github.com/remix-run/remix 32k stars |
+| SvelteKit            | Timeout | Timeout | Javascript https://github.com/sveltejs/kit 20k stars |
+
+## Analyse du résultat
+
+### Fresh est le framework web le moins émetteur de CO2
+
+* Zero JS par défaut : Fresh n'envoie du JavaScript au client que pour les "islands" interactives. La page HTML est rendue côté serveur, sans bundle React/Vue complet.
+* Pas de Virtual DOM : utilise Preact (3 KB) au lieu de React (45 KB). Les signaux Preact (useSignal) évitent les re-renders inutiles.
+
+### Dioxus 
+
+* Rust = efficacité mémoire maximale : le binaire compilé consomme une fraction de la RAM d'un runtime Node.js/Python. Pas de GC (garbage collector), pas de JIT overhead.
+* Server Functions typées : #[server] compile les appels client→serveur en RPC optimisés, sans couche HTTP superflue.
+* WASM côté client : le frontend compilé en WebAssembly est plus efficace que du JS interprété pour les opérations répétitives mais le WASM initial peut être pénalisant et le cold start explique la grande variance
 
 ## Lancer le benchmark
 
@@ -75,7 +107,7 @@ node index.js
 
 Sur le second terminal : 
 
-```greenframe analyze http://172.17.0.1:3000 ./greenframe/todo-basic.js```
+```greenframe analyze http://172.17.0.1:3000 ./_Greenframe/todo-basic.js```
 
 ### Lancer et évaluer l'application en javascript Server Side Rendering
 
@@ -95,11 +127,30 @@ node server.js
 
 Sur le troisième terminal : 
 
-```greenframe analyze http://172.17.0.1:3000 ./greenframe/vanillajs.js```
+```/home/fernando/.local/bin/greenframe analyze http://192.168.0.107:3333 ./_Greenframe/todo-basic.js```
 
 ## Lancer les applications
 
-* Adonis : npm run start
-* Dioxus : dx serve
+* Adonis : 
+npm run build
+cd build
+mkdir -p tmp
+cp ../tmp/db.sqlite3 tmp/
+npm ci --omit="dev"
+NODE_ENV=production PORT=3000 HOST=0.0.0.0 LOG_LEVEL=info APP_KEY=PQMgcKUcNlWjOUPMBuVHRu_b5bC8FzEb node bin/server.js
+* Dioxus : 
+dx build --release --web --fullstack
+cp -r target/dx/dioxus-app/release/web/public target/x86_64-unknown-linux-gnu/server-release/public
+IP=0.0.0.0 PORT=3000 ./target/x86_64-unknown-linux-gnu/server-release/dioxus-app
 * Django : python3 manage.py runserver 0.0.0.0:3000
-* Fresh : deno serve -A _fresh/server.js 2>&1
+* Fresh : deno run build && deno run start
+* Laravel : php artisan serve --host=0.0.0.0 --port=3000
+* Meteor : meteor run
+* NextJS : npm run build && npm start
+npm run build* Nuxt : npm run build && npm start
+* Qwik : npm run build && npm start
+* Remix : npm run build && npm start
+* Solid : npm run build && npm start
+* Sveltekit : npm run build && npm start
+* Tanstack : npm run build && npm start
+* Wasp : wasp start
