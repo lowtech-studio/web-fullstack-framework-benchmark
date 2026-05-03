@@ -1,0 +1,34 @@
+app TodoApp {
+  wasp: {
+    version: "^0.23.0"
+  },
+  title: "ToDo App",
+  head: [
+    "<link rel='icon' href='/favicon.ico' />",
+  ],
+  db: {
+    seeds: [
+      import { seedTodos } from "@src/dbSeeds"
+    ]
+  }
+}
+
+route RootRoute { path: "/", to: MainPage }
+page MainPage {
+  component: import { MainPage } from "@src/MainPage"
+}
+
+query getTodos {
+  fn: import { getTodos } from "@src/queries",
+  entities: [Todo]
+}
+
+action createTodo {
+  fn: import { createTodo } from "@src/actions",
+  entities: [Todo]
+}
+
+action deleteTodo {
+  fn: import { deleteTodo } from "@src/actions",
+  entities: [Todo]
+}
