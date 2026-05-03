@@ -1,0 +1,30 @@
+{
+	"name": "sveltekit",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev --host 0.0.0.0",
+		"build": "vite build",
+		"preview": "vite preview --host 0.0.0.0",
+		"start": "HOST=0.0.0.0 PORT=3000 node build/index.js",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"db:seed": "node scripts/seed.js"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^5.2.11",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@types/better-sqlite3": "^7.6.13",
+		"@types/node": "^24",
+		"svelte": "^5.55.2",
+		"svelte-check": "^4.4.6",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7"
+	},
+	"dependencies": {
+		"better-sqlite3": "^12.8.0"
+	}
+}
