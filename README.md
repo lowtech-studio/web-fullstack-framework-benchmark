@@ -38,12 +38,12 @@ On execute un scénario de CRUD standard todo-basic :
 | Nuxt                 | 11-15 mg eq co2                         | 24 mWh                             | Javascript https://github.com/nuxt/nuxt 59k stars |
 | NextJS               | 13-14 mg eq co2                         | 30 mWh                             | Javascript https://github.com/vercel/next.js 138k stars |
 | SvelteKit            | 12,8 mg eq co2                          | 29 mWh                             | Javascript https://github.com/sveltejs/kit 20k stars |
+| Qwik                 | 16 mg eq co2                            | 36 mWh                             | Javascript https://github.com/QwikDev/qwik 21k stars |
 | Adonis               | 17-20 mg eq co2                         | 39-46 mWh                          | Javascript https://github.com/adonisjs/core 18k stars |
 | TanStack             | 18 mg eq co2                            | 42 mWh                             | Javascript https://github.com/TanStack/router 13k stars |
 | Django               | 22 mg eq co2                            | 50 mWh                             | Python https://github.com/django/django 87k stars |
 | Solid Start          | 25 mg eq co2                            | 56 mWh                             | Javascript https://github.com/solidjs/solid-start 6k stars |
 | Wasp                 | 30 mg eq co2                            | 68 mWh                             | Javascript https://github.com/wasp-lang/wasp 18k stars |
-| Qwik                 | 105 mg eq co2                           | 239 mWh                            | Javascript https://github.com/QwikDev/qwik 21k stars |
 | Remix                | 220 mg eq co2                           | 498 mWh                            | Javascript https://github.com/remix-run/remix 32k stars |
 | VanillaJS Server Side Rendering | 18.9 mg eq. co2              | 42 mWh                             |
 | VanillaJS Client Side Rendering | 9.5 mg eq. co2               | 21 mWh                             |
@@ -62,12 +62,12 @@ On execute un scénario de CRUD standard todo-advanced :
 | NextJS               | 62 mg eq co2 | 141 mWh | Javascript https://github.com/vercel/next.js 138k stars |
 | Laravel Vue          | 70 mg eq co2 | 158 mWh | PHP    https://github.com/laravel/laravel    80k stars |
 | Laravel React        | 71 mg eq co2 | 161 mWh | PHP    https://github.com/laravel/laravel    80k stars |
+| Qwik                 | 74 mg eq co2 | 167 mWh | Javascript https://github.com/QwikDev/qwik 21k stars |
 | Meteor               | 87 mg eq co2 | 196 mWh | Javascript https://github.com/meteor/meteor 44k stars |
 | TanStack             | 113-117 mg eq co2 | 257 mWh | Javascript https://github.com/TanStack/router 13k stars |
 | Wasp                 | 143 mg eq co2 | 325 mWh | Javascript https://github.com/wasp-lang/wasp 18k stars |
 | Adonis               | 179-181 mg eq co2 | 411 mWh | Javascript https://github.com/adonisjs/core 18k stars |
 | Django               | 219 mg eq co2 | 497 mWh | Python https://github.com/django/django 87k stars |
-| Qwik                 | 263 mg eq co2 | 596 mWh | Javascript https://github.com/QwikDev/qwik 21k stars |
 | Remix                | Timeout | Timeout | Javascript https://github.com/remix-run/remix 32k stars |
 | SvelteKit            | Timeout | Timeout | Javascript https://github.com/sveltejs/kit 20k stars |
 

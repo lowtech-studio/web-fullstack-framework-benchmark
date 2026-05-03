@@ -4,6 +4,9 @@ import { join } from "node:path";
 const DB_PATH = join(process.cwd(), "todos.db");
 
 let _db: Database.Database | null = null;
+let _stmtGetAll: Database.Statement | null = null;
+let _stmtInsert: Database.Statement | null = null;
+let _stmtDelete: Database.Statement | null = null;
 
 export function getDb(): Database.Database {
   if (!_db) {
@@ -24,13 +27,18 @@ export interface Todo {
 }
 
 export function getAllTodos(): Todo[] {
-  return getDb().prepare("SELECT id, todo FROM todos").all() as Todo[];
+  if (!_stmtGetAll) _stmtGetAll = getDb().prepare("SELECT id, todo FROM todos");
+  return _stmtGetAll.all() as Todo[];
 }
 
 export function createTodo(todo: string): void {
-  getDb().prepare("INSERT INTO todos (todo) VALUES (?)").run(todo);
+  if (!_stmtInsert) _stmtInsert = getDb().prepare("INSERT INTO todos (todo) VALUES (?)");
+  _stmtInsert.run(todo);
 }
 
 export function deleteTodo(id: number): void {
-  getDb().prepare("DELETE FROM todos WHERE id = ?").run(id);
+  if (!_stmtDelete) _stmtDelete = getDb().prepare("DELETE FROM todos WHERE id = ?");
+  _stmtDelete.run(id);
 }
+
+export const deleteTodoById = deleteTodo;
